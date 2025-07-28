@@ -26,9 +26,70 @@
 </div>
 
 
-<br clear="both">
+  <style>
+    body {
+      background-color: #1e1e1e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-<img src="https://raw.githubusercontent.com/maurodesouza/maurodesouza/output/snake.svg" alt="Snake animation" />
+    .snake {
+      display: flex;
+      gap: 4px;
+    }
+
+    .segment {
+      width: 20px;
+      height: 20px;
+      background-color: #0f0;
+      animation: move 1s linear infinite;
+    }
+
+    .segment:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .segment:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    .segment:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    .segment:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      50% {
+        transform: translateY(-10px);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="snake">
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+    <div class="segment"></div>
+  </div>
+</body>
+</html>
+
 
 
 
